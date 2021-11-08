@@ -1,7 +1,8 @@
 ﻿  main.cpp
-D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(40,22): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(40,16): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(229,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(256,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(286,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  The contents of <numbers> are available only with C++20 or later.
+D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(44,22): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
+D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(44,16): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
+D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(253,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(280,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(310,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   OpenGLVS.vcxproj -> D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\x64\Debug\OpenGLVS.exe

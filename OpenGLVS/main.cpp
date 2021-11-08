@@ -2,6 +2,10 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <math.h>
+#include <cmath>
+#include <numbers> // std::numbers
+#include <iomanip>
+#include <iostream>
 
 //#define SCREEN_WIDTH 640
 //#define SCREEN_HEIGHT 480
@@ -26,7 +30,7 @@ int main(void)
     }
 
     // Create a windowed mode window and its OpenGL context
-    window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Hello World", NULL, NULL);
+    window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "2D House", NULL, NULL);
 
     if (!window)
     {
@@ -115,81 +119,99 @@ int main(void)
     // Loop until the user closes the window
     while (!glfwWindowShouldClose(window))
     {
+        glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
       // Render OpenGL here house outline
             
         glEnableClientState(GL_VERTEX_ARRAY);           
         glVertexPointer(3, GL_FLOAT, 0, lineVertices);        
-        glDrawArrays(GL_POLYGON, 0, 8); // Number of points in polygon             
-        glColor3f(1.0f, 1.0f, 1.0f); //white
+        glDrawArrays(GL_POLYGON, 0, 8); // Number of points in polygon         
+        glColor3f(0.3f, 0.3f, 0.3f); //grey
         glDisableClientState(GL_VERTEX_ARRAY);
 
         // Render OpenGL here   left window      
         glEnableClientState(GL_VERTEX_ARRAY);
+        glColor3f(0.0f, 1.0f, 0.0f); //green
         glVertexPointer(3, GL_FLOAT, 0, windowL);
         glDrawArrays(GL_POLYGON, 0, 4); // Number of points in polygon             
-        glColor3f(1.0f, 1.0f, 1.0f); //white
+       
         glDisableClientState(GL_VERTEX_ARRAY);
 
         // Render OpenGL here   windowLHL  
         glEnableClientState(GL_VERTEX_ARRAY);
+        glColor3f(0.3f, 0.3f, 0.3f); //grey
         glVertexPointer(3, GL_FLOAT, 0, windowLHL);
         glDrawArrays(GL_LINES, 0, 2); // Number of points in polygon       
-        glColor3f(1.0f, 1.0f, 1.0f); //white
+        //glColor3f(1.0f, 1.0f, 1.0f); //white
+       
         glDisableClientState(GL_VERTEX_ARRAY);
 
         // Render OpenGL here   windowLVL  
         glEnableClientState(GL_VERTEX_ARRAY);
         glVertexPointer(3, GL_FLOAT, 0, windowLVL);
         glDrawArrays(GL_LINES, 0, 2); // Number of points in polygon      
-        glColor3f(1.0f, 1.0f, 1.0f); //white
+        //glColor3f(1.0f, 1.0f, 1.0f); //white
+        glColor3f(0.3f, 0.3f, 0.3f); //grey
         glDisableClientState(GL_VERTEX_ARRAY);
-
-        // Render OpenGL here door         
-        glEnableClientState(GL_VERTEX_ARRAY);
-        glVertexPointer(3, GL_FLOAT, 0, door);
-        glDrawArrays(GL_POLYGON, 0, 4); // Number of points in polygon        
-        glColor3f(1.0f, 1.0f, 1.0f); //white
-        glDisableClientState(GL_VERTEX_ARRAY);
-
-        // Render OpenGL here door knob
-        glEnable(GL_POINT_SMOOTH); // make the point circular
-        glEnableClientState(GL_VERTEX_ARRAY); // tell OpenGL that you're using a vertex array for fixed-function attribute
-        glPointSize(10); // must be added before glDrawArrays is called
-        glVertexPointer(2, GL_FLOAT, 0, pointVertex1); // point to the vertices to be used
-        glDrawArrays(GL_POINTS, 0, 1); // draw the vertixes
-        glDisableClientState(GL_VERTEX_ARRAY); // tell OpenGL that you're finished using the vertex arrayattribute
-        glDisable(GL_POINT_SMOOTH); // stop the smoothing to make the points circular
 
         // Render OpenGL here right window        
         glEnableClientState(GL_VERTEX_ARRAY);
+        glColor3f(0.0f, 1.0f, 0.0f); //green
         glVertexPointer(3, GL_FLOAT, 0, windowR);
-        glDrawArrays(GL_POLYGON, 0, 4); // Number of points in polygon       
-        glColor3f(1.0f, 1.0f, 1.0f); //white
+        glDrawArrays(GL_POLYGON, 0, 4); // Number of points in polygon   
+        
         glDisableClientState(GL_VERTEX_ARRAY);
 
         // Render OpenGL here   windowRHL  
         glEnableClientState(GL_VERTEX_ARRAY);
+        glColor3f(0.3f, 0.3f, 0.3f); //grey
         glVertexPointer(3, GL_FLOAT, 0, windowRHL);
         glDrawArrays(GL_LINES, 0, 2); // Number of points in polygon       
-        glColor3f(1.0f, 1.0f, 1.0f); //white
+        //glColor3f(1.0f, 1.0f, 1.0f); //white
+       
         glDisableClientState(GL_VERTEX_ARRAY);
 
         // Render OpenGL here   windowRVL  
         glEnableClientState(GL_VERTEX_ARRAY);
         glVertexPointer(3, GL_FLOAT, 0, windowRVL);
         glDrawArrays(GL_LINES, 0, 2); // Number of points in polygon      
-        glColor3f(1.0f, 1.0f, 1.0f); //white
+        //glColor3f(1.0f, 1.0f, 1.0f); //white
+        glColor3f(0.3f, 0.3f, 0.3f); //grey
         glDisableClientState(GL_VERTEX_ARRAY);
 
-
-        // render OpenGL here  dome       
-        glColor3f(1.0f, 1.0f, 1.0f); //white
-        drawSemiCircle(325, 450, 100, 100);//x axis, y axis, size
-
-        //render crescent
+        // Render OpenGL here door         
         glEnableClientState(GL_VERTEX_ARRAY);
+        glColor3f(0.0f, 1.0f, 0.0f); //green
+        glVertexPointer(3, GL_FLOAT, 0, door);
+        glDrawArrays(GL_POLYGON, 0, 4); // Number of points in polygon        
+        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+        glDisableClientState(GL_VERTEX_ARRAY);
+
+        // Render OpenGL here door knob        
+        glEnable(GL_POINT_SMOOTH); // make the point circular
+        glEnableClientState(GL_VERTEX_ARRAY); // tell OpenGL that you're using a vertex array for fixed-function attribute
+        glColor3f(0.0f, 0.0f, 1.0f); //blue
+        glPointSize(10); // must be added before glDrawArrays is called
+        glVertexPointer(2, GL_FLOAT, 0, pointVertex1); // point to the vertices to be used
+        glDrawArrays(GL_POINTS, 0, 1); // draw the vertixes
+        
+        glDisableClientState(GL_VERTEX_ARRAY); // tell OpenGL that you're finished using the vertex arrayattribute
+        glDisable(GL_POINT_SMOOTH); // stop the smoothing to make the points circular
+
+       
+
+
+        // render OpenGL here  dome 
+        
+        glEnableClientState(GL_VERTEX_ARRAY);
+        glColor3f(0.3f, 0.3f, 0.3f); //grey
+        drawSemiCircle(325, 450, 100, 100);//x axis, y axis, size
+        glDisableClientState(GL_VERTEX_ARRAY);
+
+        //render crescent moon
+        glEnableClientState(GL_VERTEX_ARRAY);
+        glColor3f(0.8f, 0.6f, 0.2f); //gold
         glLineWidth(5);
         glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
         glLineWidth(5);
@@ -197,8 +219,9 @@ int main(void)
         glLineWidth(5);
         drawCircleFill(530, 530, 40, 360); // movement on x axis, movement on y axis , radius, sides 
         glLineWidth(5);
-        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);       
-       glColor3f(0.0f, 0.0f, 0.0f); //black
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); 
+       
+        glColor3f(1.0f, 1.0f, 1.0f); //white
        drawCircleFill(555, 540, 40, 360); // movement on x axis, movement on y axis , radius, sides        
         glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); 
         glDisableClientState(GL_VERTEX_ARRAY);
@@ -207,7 +230,8 @@ int main(void)
 
         // Swap front and back buffers
         glfwSwapBuffers(window);      
-        glColor3f(1.0f, 1.0f, 1.0f); //white
+        //glColor3f(1.0f, 1.0f, 1.0f); //white
+        glColor3f(0.3f, 0.3f, 0.3f); //grey
        // glColor3f(0.5, 0.5, 0.2);//yellow
         glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
         glLineWidth(1);
@@ -226,7 +250,7 @@ int main(void)
 
 void drawSemiCircle(float cx, float cy, float r, int num_segments)
 {
-    float theta = 3.1415926 / float(num_segments);
+    float theta = 3.1415926 / float(num_segments);   
     float tan = tanf(theta);//calculate the tangent 
     float radius = cosf(theta);//calculate the radius
     float x = r;//we start at angle = 0 
