@@ -1,17 +1,7 @@
 ﻿  main.cpp
 D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(40,22): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
 D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(40,16): warning C4244: 'argument': conversion from 'float' to 'GLint', possible loss of data
-D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(126,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(134,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(142,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(150,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(159,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(177,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(185,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(193,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(203,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(228,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(297,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(333,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(368,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(229,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(256,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\OpenGLVS\main.cpp(286,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   OpenGLVS.vcxproj -> D:\ICS_3.2\computer graphics\openGLRoot\OpenGLVS\x64\Debug\OpenGLVS.exe

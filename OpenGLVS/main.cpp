@@ -121,42 +121,36 @@ int main(void)
             
         glEnableClientState(GL_VERTEX_ARRAY);           
         glVertexPointer(3, GL_FLOAT, 0, lineVertices);        
-        glDrawArrays(GL_POLYGON, 0, 8); // Number of points in polygon
-       glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-        glColor3f(0.5, 0.5, 0.2);//yellow
+        glDrawArrays(GL_POLYGON, 0, 8); // Number of points in polygon             
+        glColor3f(1.0f, 1.0f, 1.0f); //white
         glDisableClientState(GL_VERTEX_ARRAY);
 
         // Render OpenGL here   left window      
         glEnableClientState(GL_VERTEX_ARRAY);
         glVertexPointer(3, GL_FLOAT, 0, windowL);
-        glDrawArrays(GL_POLYGON, 0, 4); // Number of points in polygon
-        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-        glColor3f(0.5, 0.5, 0.2);//yellow
+        glDrawArrays(GL_POLYGON, 0, 4); // Number of points in polygon             
+        glColor3f(1.0f, 1.0f, 1.0f); //white
         glDisableClientState(GL_VERTEX_ARRAY);
 
         // Render OpenGL here   windowLHL  
         glEnableClientState(GL_VERTEX_ARRAY);
         glVertexPointer(3, GL_FLOAT, 0, windowLHL);
-        glDrawArrays(GL_LINES, 0, 2); // Number of points in polygon
-       // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-        glColor3f(0.5, 0.5, 0.2);//yellow
+        glDrawArrays(GL_LINES, 0, 2); // Number of points in polygon       
+        glColor3f(1.0f, 1.0f, 1.0f); //white
         glDisableClientState(GL_VERTEX_ARRAY);
 
         // Render OpenGL here   windowLVL  
         glEnableClientState(GL_VERTEX_ARRAY);
         glVertexPointer(3, GL_FLOAT, 0, windowLVL);
-        glDrawArrays(GL_LINES, 0, 2); // Number of points in polygon
-       // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-        glColor3f(0.5, 0.5, 0.2);//yellow
+        glDrawArrays(GL_LINES, 0, 2); // Number of points in polygon      
+        glColor3f(1.0f, 1.0f, 1.0f); //white
         glDisableClientState(GL_VERTEX_ARRAY);
 
-        // Render OpenGL here door   
-        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+        // Render OpenGL here door         
         glEnableClientState(GL_VERTEX_ARRAY);
         glVertexPointer(3, GL_FLOAT, 0, door);
-        glDrawArrays(GL_POLYGON, 0, 4); // Number of points in polygon
-        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-        glColor3f(0.5, 0.5, 0.2);//yellow
+        glDrawArrays(GL_POLYGON, 0, 4); // Number of points in polygon        
+        glColor3f(1.0f, 1.0f, 1.0f); //white
         glDisableClientState(GL_VERTEX_ARRAY);
 
         // Render OpenGL here door knob
@@ -168,85 +162,60 @@ int main(void)
         glDisableClientState(GL_VERTEX_ARRAY); // tell OpenGL that you're finished using the vertex arrayattribute
         glDisable(GL_POINT_SMOOTH); // stop the smoothing to make the points circular
 
-        // Render OpenGL here right window   
-        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+        // Render OpenGL here right window        
         glEnableClientState(GL_VERTEX_ARRAY);
         glVertexPointer(3, GL_FLOAT, 0, windowR);
-        glDrawArrays(GL_POLYGON, 0, 4); // Number of points in polygon
-        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-        glColor3f(0.5, 0.5, 0.2);//yellow
+        glDrawArrays(GL_POLYGON, 0, 4); // Number of points in polygon       
+        glColor3f(1.0f, 1.0f, 1.0f); //white
         glDisableClientState(GL_VERTEX_ARRAY);
 
         // Render OpenGL here   windowRHL  
         glEnableClientState(GL_VERTEX_ARRAY);
         glVertexPointer(3, GL_FLOAT, 0, windowRHL);
-        glDrawArrays(GL_LINES, 0, 2); // Number of points in polygon
-       // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-        glColor3f(0.5, 0.5, 0.2);//yellow
+        glDrawArrays(GL_LINES, 0, 2); // Number of points in polygon       
+        glColor3f(1.0f, 1.0f, 1.0f); //white
         glDisableClientState(GL_VERTEX_ARRAY);
 
         // Render OpenGL here   windowRVL  
         glEnableClientState(GL_VERTEX_ARRAY);
         glVertexPointer(3, GL_FLOAT, 0, windowRVL);
-        glDrawArrays(GL_LINES, 0, 2); // Number of points in polygon
-       // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-        glColor3f(0.5, 0.5, 0.2);//yellow
+        glDrawArrays(GL_LINES, 0, 2); // Number of points in polygon      
+        glColor3f(1.0f, 1.0f, 1.0f); //white
         glDisableClientState(GL_VERTEX_ARRAY);
 
 
-       
-
-         // render OpenGL here semicircle
-        //drawCircle(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 0, 120, 36);
-        // 
-        // render OpenGL here  dome
-        glColor3f(0.5, 0.5, 0.2);//yellow       
+        // render OpenGL here  dome       
+        glColor3f(1.0f, 1.0f, 1.0f); //white
         drawSemiCircle(325, 450, 100, 100);//x axis, y axis, size
 
         //render crescent
+        glEnableClientState(GL_VERTEX_ARRAY);
         glLineWidth(5);
         glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
         glLineWidth(5);
-       // drawCircle(500, 400, 40, 360); // movement on x axis, movement on y axis , radius, sides
-        drawCircle(530, 530, 40, 360);
-        drawCircleFill(555, 540, 40, 360);
-        //glColor3f(1.0, 1.0, 0.0);//red       
+        drawCircle(530, 530, 40, 360); // movement on x axis, movement on y axis , radius, sides       
         glLineWidth(5);
-       // drawCircleFill(500, 400, 40, 360); // movement on x axis, movement on y axis , radius, sides 
-        drawCircle(530, 530, 40, 360);
-        drawCircleFill(555, 540, 40, 360);
-       // glColor3f(1.0, 1.0, 0.0);//red
+        drawCircleFill(530, 530, 40, 360); // movement on x axis, movement on y axis , radius, sides 
         glLineWidth(5);
-        //glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-        //glColor3f(1.0f, 0.0f, 0.0f); //black
-        glColor3f(1.0, 1.0, 0.0);//red
-       // glColor3f(0.3, 0.3, 0.3);
-       // glColor3f(0.5, 0.5, 0.2);//yellow
-        //drawCircleFill(525, 410, 40, 360); // movement on x axis, movement on y axis , radius, sides 
-       // drawCircleFill(555, 540, 40, 360);
-        
-       glColor3f(0.5, 0.5, 0.2);//yellow
-       
-        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-        
-       // glColor3f(0.3, 0.3, 0.3);
-        //glColor3f(1.0f, 0.0f, 0.0f); //black
-       // glColor3f(0.5, 0.5, 0.2);//yellow
-        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-        glLineWidth(1); 
-       
-        
-        
-        
-      
-        
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);       
+       glColor3f(0.0f, 0.0f, 0.0f); //black
+       drawCircleFill(555, 540, 40, 360); // movement on x axis, movement on y axis , radius, sides        
+        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); 
+        glDisableClientState(GL_VERTEX_ARRAY);
 
+       
 
         // Swap front and back buffers
-        glfwSwapBuffers(window);
-
+        glfwSwapBuffers(window);      
+        glColor3f(1.0f, 1.0f, 1.0f); //white
+       // glColor3f(0.5, 0.5, 0.2);//yellow
+        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+        glLineWidth(1);
         // Poll for and process events
         glfwPollEvents();
+        
+        
+       
     }
 
     glfwTerminate();
@@ -254,76 +223,30 @@ int main(void)
     return 0;
 }
 
-/*
-void drawCircle(GLfloat x, GLfloat y, GLfloat z, GLfloat radius, GLint numberOfSides)
-{
-   
-    GLint numberOfVertices = numberOfSides + 1;
 
-    GLfloat doublePi = 2.0f * M_PI;
-
-    GLfloat circleVerticesX[numberOfVertices];
-    GLfloat circleVerticesY[numberOfVertices];
-    GLfloat circleVerticesZ[numberOfVertices];
-
-    //circleVerticesX[0] = x;
-    //circleVerticesY[0] = y;
-    //circleVerticesZ[0] = z;
-
-    for (int i = 0; i < numberOfVertices; i++)
-    {
-        circleVerticesX[i] = x + (radius * cos(i * doublePi / numberOfSides));
-        circleVerticesY[i] = y + (radius * sin(i * doublePi / numberOfSides));
-        circleVerticesZ[i] = z;
-    }
-
-    GLfloat allCircleVertices[numberOfVertices * 3];
-
-    for (int i = 0; i < numberOfVertices; i++)
-    {
-        allCircleVertices[i * 3] = circleVerticesX[i];
-        allCircleVertices[(i * 3) + 1] = circleVerticesY[i];
-        allCircleVertices[(i * 3) + 2] = circleVerticesZ[i];
-    }
-
-    glEnableClientState(GL_VERTEX_ARRAY);
-    glVertexPointer(3, GL_FLOAT, 0, allCircleVertices);
-    glDrawArrays(GL_LINE_STRIP, 0, numberOfVertices);
-    glDisableClientState(GL_VERTEX_ARRAY);
-}
-*/
 void drawSemiCircle(float cx, float cy, float r, int num_segments)
 {
     float theta = 3.1415926 / float(num_segments);
-    float tangetial_factor = tanf(theta);//calculate the tangential factor 
-
-    float radial_factor = cosf(theta);//calculate the radial factor 
-
+    float tan = tanf(theta);//calculate the tangent 
+    float radius = cosf(theta);//calculate the radius
     float x = r;//we start at angle = 0 
-
     float y = 0;
 
     glBegin(GL_LINE_LOOP);
-    for (int ii = 0; ii < num_segments; ii++)
+    for (int i = 0; i < num_segments; i++)
     {
         glVertex2f(x + cx, y + cy);//output vertex 
 
-        //calculate the tangential vector 
-        //remember, the radial vector is (x, y) 
-        //to get the tangential vector we flip those coordinates and negate one of them 
-
+       
         float tx = -y;
         float ty = x;
 
-        //add the tangential vector 
-
-        x += tx * tangetial_factor;
-        y += ty * tangetial_factor;
-
-        //correct using the radial factor 
-
-        x *= radial_factor;
-        y *= radial_factor;
+        //add the tangent vector 
+        x += tx * tan;
+        y += ty * tan;
+        
+        x *= radius;
+        y *= radius;
     }
     glEnd();
 }
@@ -331,44 +254,39 @@ void drawSemiCircle(float cx, float cy, float r, int num_segments)
 void drawCircle(float cx, float cy, float r, int num_segments)
 {
     float theta = 3.1415926 * 2 / float(num_segments);
-    float tangetial_factor = tanf(theta);//calculate the tangential factor 
+    float tan = tanf(theta);//calculate the tangent 
 
-    float radial_factor = cosf(theta);//calculate the radial factor 
-
+    float radius = cosf(theta);//calculate the radius 
     float x = r;//we start at angle = 0 
 
     float y = 0;
     glLineWidth(2);
     glBegin(GL_LINE_LOOP);
-    for (int ii = 0; ii < num_segments; ii++)
+    for (int i = 0; i < num_segments; i++)
     {
         glVertex2f(x + cx, y + cy);//output vertex 
 
-        //calculate the tangential vector 
-        //remember, the radial vector is (x, y) 
-        //to get the tangential vector we flip those coordinates and negate one of them 
-
+       
         float tx = -y;
         float ty = x;
 
-        //add the tangential vector 
+        //add the tangent vector
 
-        x += tx * tangetial_factor;
-        y += ty * tangetial_factor;
+        x += tx * tan;
+        y += ty * tan;
+               
 
-        //correct using the radial factor 
-
-        x *= radial_factor;
-        y *= radial_factor;
+        x *= radius;
+        y *= radius;
     }
     glEnd();
 }
 void drawCircleFill(float cx, float cy, float r, int num_segments)
 {
     float theta = 3.1415926 * 2 / float(num_segments);
-    float tangetial_factor = tanf(theta);//calculate the tangential factor 
+    float tan = tanf(theta);//calculate the tangent 
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-    float radial_factor = cosf(theta);//calculate the radial factor 
+    float radius = cosf(theta);//calculate the radius
 
     float x = r;//we start at angle = 0 
 
@@ -380,24 +298,17 @@ void drawCircleFill(float cx, float cy, float r, int num_segments)
     glBegin(GL_POLYGON);
     for (int ii = 0; ii < num_segments; ii++)
     {
-        glVertex2f(x + cx, y + cy);//output vertex 
-
-        //calculate the tangential vector 
-        //remember, the radial vector is (x, y) 
-        //to get the tangential vector we flip those coordinates and negate one of them 
-
+        glVertex2f(x + cx, y + cy);//output vertex         
+        //to get the tangent vector we flip those coordinates and negate one of them 
         float tx = -y;
         float ty = x;
 
-        //add the tangential vector 
+        //add the tangent vector 
+        x += tx * tan;
+        y += ty * tan;       
 
-        x += tx * tangetial_factor;
-        y += ty * tangetial_factor;
-
-        //correct using the radial factor 
-
-        x *= radial_factor;
-        y *= radial_factor;
+        x *= radius;
+        y *= radius;
     }
     glEnd();
 }
